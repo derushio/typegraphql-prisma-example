@@ -4,21 +4,29 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "dev": "ts-node-dev src/main.ts",
+        "start": "ts-node-dev src/main.ts",
         "migrate": "echo 'マイグレーション名を入力' && read MIGRATION_NAME && prisma migrate dev --name $MIGRATION_NAME && yarn generate",
         "migration": "prisma migrate dev && yarn generate",
         "generate": "prisma generate"
     },
     "devDependencies": {
         "@types/node": "^16.9.6",
+        "prettier": "^2.4.1",
+        "prettier-plugin-organize-imports": "^2.3.4",
         "prisma": "~3.0.1",
         "ts-node": "^10.2.1",
+        "ts-node-dev": "^1.1.8",
         "typegraphql-prisma": "^0.16.0",
         "typescript": "^4.4.3"
     },
     "dependencies": {
         "@prisma/client": "~3.0.1",
+        "apollo-server": "^3.3.0",
+        "class-validator": "^0.13.1",
+        "graphql": "^15.6.0",
         "graphql-fields": "^2.0.3",
-        "graphql-scalars": "^1.10.1"
+        "graphql-scalars": "^1.10.1",
+        "reflect-metadata": "^0.1.13",
+        "type-graphql": "^1.1.1"
     }
 }
